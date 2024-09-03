@@ -85,3 +85,20 @@ On peut ensuite créer des liens vers ces routes avec des balises d'ancre, et l'
 <a routerLink="/">Home</a>
 ```
 
+## Les Images
+
+Les images sont gérées en lazy loading par Angular grâce à la directive [ngSrc]
+- Importer `ngOptmizedImage` dans le composant
+- Remplacer src par [ngSrc]
+- Indiquer une width et height ou fill
+- Lorsque fill, le parent doit être en `position: relative`, et l'image en `object-fit: contain ou cover`.
+
+## Les Pipes
+
+Les pipes sont des fonctions qui prennent une valeur en entrée, et ressorte la valeur transformée.
+Il y a des pipes pour le texte ``uppercase``, `lowercase`, `titlecase`
+Il y a un pipe ``number`` qui prend en paramètre une string qui défini : 
+- le nombre minimum de chiffres avant la virgule,
+- le nombre min de chiffres après la virgule
+- le nombre max de chiffres après la virgule
+- "1.2-3"

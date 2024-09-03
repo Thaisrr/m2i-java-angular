@@ -1,3 +1,16 @@
 .red {
   color: #FF0000;
 }
+
+.container {
+  position: relative;
+  width: 50%;
+  aspect-ratio: 1/1;
+  border: solid;
+}
+
+.container img {
+  object-fit: contain;
+}
+
+

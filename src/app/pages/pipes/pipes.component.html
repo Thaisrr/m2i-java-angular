@@ -1,0 +1,31 @@
+<h1>Les Pipes</h1>
+
+<h2>Texte</h2>
+<ul>
+  <li>{{ message }}</li>
+  <li>{{ message | uppercase }}</li>
+  <li>{{ message | lowercase }}</li>
+  <li>{{ message | titlecase }}</li>
+</ul>
+
+<h2>Nombres</h2>
+<ul>
+  <li>{{ pi }}</li>
+  <li>{{ pi | number}}</li>
+  <li>{{ pi | number : '1.0-2'}}</li>
+  <li>{{ 4 | number : '3.3-3'}}</li>
+</ul>
+
+<h2>Les dates</h2>
+<ul>
+  <li>{{today}}</li>
+  <li>{{today | date: 'short'}}</li>
+  <li>{{today | date: 'long'}}</li>
+  <li>{{today | date: 'medium'}}</li>
+
+  <li>{{today | date: 'dd / MM / YYYY'}}</li>
+
+  <p>Plus d'options de format de date
+  <a href="https://v17.angular.io/api/common/DatePipe#custom-format-options">sur la doc !</a>
+  </p>
+</ul>

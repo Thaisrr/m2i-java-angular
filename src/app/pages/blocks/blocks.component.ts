@@ -18,6 +18,11 @@ export class BlocksComponent {
     name: 'Jean Michel'
   }
 
+  book = {
+    title: 'La Passe Miroir',
+    author: 'Christelle Dabos'
+  }
+
 
   toggleLogged() {
     this.isLogged = !this.isLogged;
