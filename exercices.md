@@ -21,3 +21,9 @@
 - Afficher la liste
 - Afficher un message si il n'y a rien dans la liste
 - Ajouter un bouton de suppression sur chaque élément de liste.
+
+## Exercice 3
+
+- Créer un pipe personnalisé qui prend en paramétre un tableau, et une string 'order' ( 'asc', 'desc');
+- Utiliser ce pipe sur le tableau des séries pour le trier par alphabétique/
+- Ajouter 2 boutons pour modifier l'ordre du tableau (asc, desc).
