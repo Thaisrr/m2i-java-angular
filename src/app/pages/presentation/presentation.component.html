@@ -1,0 +1,41 @@
+<h1>Présentation</h1>
+
+<section>
+  <h2>Interpolation</h2>
+
+  <p>Nom : {{ name }}</p>
+  <p>1 + 1 = {{ 1 + 1 }}</p>
+  <p>NOM : {{ name.toUpperCase() }}</p>
+  <p>{{ isLogged ? 'Vous êtes connecté.e' : 'Veuillez vous connecter'}}</p>
+</section>
+
+<section>
+  <h2>Data Binding / Attribute Binding</h2>
+
+  <p>
+    <img [src]="galaxy" [alt]="description" />
+  </p>
+  <p [style]="{
+  backgroundColor: color,
+  fontSize: size + 'px'}"
+  >Mon paragraphe stylé</p>
+
+  <p [style]="myStyle">Un autre p stylé</p>
+
+  <p id="monId" [class]="maClasseA">J'ai la classe "blue"</p>
+
+  <p [class]="isLogged ? maClasseA : maClasseB">J'ai une classe dynamique</p>
+
+  <p [ngClass]="['maClass', maClasseB]">J'ai plusieurs classes</p>
+
+  <p class="classeStatique" [ngClass]="{'classe1' : true, classes2 : isLogged}">J'ai des classes conditionnelles</p>
+
+  <p [ngClass]="{'red' : isLogged}">Je change de couleur !</p>
+
+  <p>
+    <button (click)="toggleLogged()">
+      {{isLogged ? 'Déconnexion' : 'Connexion'}}
+    </button>
+  </p>
+
+</section>
