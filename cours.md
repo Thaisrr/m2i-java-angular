@@ -69,4 +69,19 @@ import {NgClass} from "@angular/common";
 export class PresentationComponent { }
 ```
 
+## Le router
+
+Pour créer des "routes", on les définit dans le fichier app.routes.ts sous la forme d'un objet
+qui contient un path ( le chemin dans l'url ), et le composant.
+
+```ts
+export const routes = [
+  {path: '', component: HomeComponent}
+]
+```
+
+On peut ensuite créer des liens vers ces routes avec des balises d'ancre, et l'attribut `routerLink` : 
+```angular2html
+<a routerLink="/">Home</a>
+```
 

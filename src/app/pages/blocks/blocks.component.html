@@ -1,0 +1,67 @@
+<h1>Les blocks</h1>
+
+<section>
+  <h2>Les blocks conditionnels</h2>
+
+  @if (!isLogged) {
+    <div>
+      <h3>Vous n'êtes pas connecter.</h3>
+      <p>
+        <button (click)="toggleLogged()">Se connecter</button>
+      </p>
+    </div>
+  }
+  @else if(isLogged) {
+    <div>
+      <h3>Bienvenue Jean Michel</h3>
+      <p>
+        <button (click)="toggleLogged()">Logout</button>
+      </p>
+    </div>
+  } @else {
+     <p>Vous n'avez rien à faire ici !</p>
+  }
+
+</section>
+
+<section>
+  @switch (today) {
+    @case ('Monday') {
+      <p>Oh no ! C'est lundi</p>
+    }
+    @case ('Tuesday') {
+      <p>On commence Angular !</p>
+    }
+    @case ('Friday') {
+      <p>Yeah !</p>
+    }
+    @default {
+      <p>Un jour comme un autre</p>
+    }
+  }
+</section>
+
+<section>
+  <h2>Les boucles</h2>
+
+  <ul>
+    @for (f of fruits; track f; let i = $index) {
+      <li>A l'index : {{ i }} j'ai : {{ f }}. C'est un élément pair ? : {{ $even }}.
+      C'est le premier élément de la liste ? : {{ $first }}
+        C'est le dernier élément de la liste: {{ $last }}
+        Il y {{ $count }} items dans le tableau.
+      </li>
+    } @empty {
+      <p>La liste est vide !</p>
+    }
+  </ul>
+</section>
+
+<section>
+  <h2>Les variables de template</h2>
+
+  @let name = user.name;
+
+  <p>Username : {{name}}</p>
+
+</section>

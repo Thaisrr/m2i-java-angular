@@ -1,0 +1,16 @@
+nav {
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+  margin: auto;
+  gap: 20px;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
