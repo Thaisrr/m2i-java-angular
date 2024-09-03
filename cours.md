@@ -13,6 +13,11 @@ Installer les dépendances avec `npm i` ou `npm install`.
 
 On lance le serveur avec `npm start` ou `ng serve`.
 
+Si le port 4200 est déjà utilisé, on peut le killer avec : 
+```bash
+netstat -ano | findstr :4200
+```
+
 ## Créer un nouveau composant
 
 ```bash
@@ -29,3 +34,39 @@ On peut afficher n'importe quelle expressions JS tant qu'elle retourne quelque c
 
 Permet d'interpréter du JS dans les attributs HTML.
 On peut interpréter du JS dans n'importe quel attribut HTML à condition de mettre l'attribut entre crochets.
+
+```angular2html
+<img [src]="uneImageEnVariable" />
+```
+
+## Les classes
+
+On peut gérer dynamiquement les classes avec la directive [ngClass] : 
+On peut alors passer les classes sous forme de tableau : 
+```angular2html
+<p [ngClass]="['classe1', variable1]"></p>
+```
+
+Ou sous forme d'objet dont la clef est le nom de la classe, et la valeur un boolean.
+C'est pratique pour passer des classes conditionnellement.
+
+```angular2html
+<p [ngClass]="{maClasseA: true}"></p>
+```
+
+Attention, lorsque vous souhaitez utiliser ngClass dans un composant, il faut l'importer afin de rendre la directive accessible : 
+
+```ts
+import {NgClass} from "@angular/common";
+
+@Component({
+  selector: 'app-presentation',
+  standalone: true,
+  imports: [
+    NgClass
+  ],
+})
+export class PresentationComponent { }
+```
+
+
