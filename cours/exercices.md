@@ -27,3 +27,15 @@
 - Créer un pipe personnalisé qui prend en paramétre un tableau, et une string 'order' ( 'asc', 'desc');
 - Utiliser ce pipe sur le tableau des séries pour le trier par alphabétique/
 - Ajouter 2 boutons pour modifier l'ordre du tableau (asc, desc).
+
+## Exercice 4
+
+- Créer un composant Librairie, et sa route
+- Dans ce composant, afficher une liste de livres
+  - title
+  - author
+  - isRead
+- Quand les livres sont lus, on affiche un emoji pouce vers le haut à côté du titre 
+- + titre souligné,
+- sinon un emoji pouce vers le bas. ( Utiliser un pipe pour l'emoji )
+- Ajouter un bouton pour marquer un livre comme lu / pas lu.
