@@ -102,3 +102,8 @@ Il y a un pipe ``number`` qui prend en paramètre une string qui défini :
 - le nombre min de chiffres après la virgule
 - le nombre max de chiffres après la virgule
 - "1.2-3"
+
+On peut créer un pipe personnalisé avec la commande :
+```bash
+ng g pipe monpipe
+```
