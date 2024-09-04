@@ -111,5 +111,13 @@ ng g pipe monpipe
 ## Les Formulaires
 
 2 types en Angular : 
-- Template Driven Form
+- Template Driven Form : avec [(ngModel)] qui permet de faire du two way binding
 - Reactive Forms
+
+Les états des formControl :
+- valid -> respecte tous les validators
+- invalid -> ne respecte au moins des validators
+- touched (?) -> le champs à déjà perdu le focus
+- untouched -> le champs n'a jamais perdu le focus
+- dirty -> le champs a déjà reçu une intéraction
+- pristine -> le champs n'a jamais reçu d'intéraction

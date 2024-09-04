@@ -1,17 +1,19 @@
 import { Component } from '@angular/core';
-import {FormsModule} from "@angular/forms";
+import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-formulaire',
   standalone: true,
   imports: [
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   templateUrl: './formulaire.component.html',
   styleUrl: './formulaire.component.css'
 })
 export class FormulaireComponent {
 
+  /***** Template driven forms *****/
   message: string = 'Coucou';
   message2: string = '';
   user = {
@@ -37,5 +39,44 @@ export class FormulaireComponent {
     }
   }
 
+  /****** Reactive Forms ******/
+
+  book_control = new FormControl(``, [
+    Validators.required,
+    Validators.minLength(2),
+    Validators.pattern(/^[A-Za-z0-9éîïè'].*/)
+  ]);
+
+  saveBook() {
+    if(this.book_control.valid) {
+      console.log(`Livre sauvegardé`, this.book_control.value);
+      this.book_control.reset();
+    }
+  }
+
+  /*** Form Group ****/
+
+  formation_form = new FormGroup({
+    title: new FormControl('', [Validators.required]),
+    duration: new FormControl(5, [
+      Validators.min(1),
+      Validators.max(10)
+    ]),
+  });
+
+  get title() {
+    return this.formation_form.controls.title;
+  }
+
+  get duration() {
+    return this.formation_form.controls.duration;
+  }
+
+  saveFormation() {
+    if(this.formation_form.valid) {
+      console.log('Sauvegarde de la formation', this.formation_form.value);
+      this.formation_form.reset();
+    }
+  }
 
 }
