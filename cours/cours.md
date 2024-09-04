@@ -121,3 +121,12 @@ Les états des formControl :
 - untouched -> le champs n'a jamais perdu le focus
 - dirty -> le champs a déjà reçu une intéraction
 - pristine -> le champs n'a jamais reçu d'intéraction
+
+Dans les formulaires réactives, on peut retrouver 3 classes principales pour représenter les données :
+- FormControl pour les données simples ( boolean, string, number),
+- FormGroup pour les objets,
+- FormArray pour les tableaux.
+
+Dans un formArray, les formControlName sont l'index récupéré par le @for.
+Il faut donc le passer dynamiquement, en mettant formControlName entre crochets :
+`[formControlName]="$index"`.

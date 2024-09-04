@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
+import {FormArray, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-formulaire',
@@ -62,6 +62,14 @@ export class FormulaireComponent {
       Validators.min(1),
       Validators.max(10)
     ]),
+    trainer: new FormGroup({
+      firstname: new FormControl('Jean Michel'),
+      lastname: new FormControl('La Tourte')
+    }),
+    modules: new FormArray([
+      new FormControl(''),
+      new FormControl('')
+    ])
   });
 
   get title() {
@@ -71,6 +79,15 @@ export class FormulaireComponent {
   get duration() {
     return this.formation_form.controls.duration;
   }
+
+  get modules() {
+    return this.formation_form.controls.modules;
+  }
+
+  addModule() {
+    this.modules.push(new FormControl(''))
+  }
+
 
   saveFormation() {
     if(this.formation_form.valid) {

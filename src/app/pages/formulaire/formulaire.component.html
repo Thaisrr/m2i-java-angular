@@ -88,6 +88,32 @@
         <small class="error">Entre 1 et 10 jours</small>
       }
     </p>
+    <fieldset formGroupName="trainer">
+      <legend>Formateur.trice</legend>
+      <p>
+        <label for="first">Prénom</label>
+        <input id="first" formControlName="firstname">
+      </p>
+      <p>
+        <label for="last">Nom</label>
+        <input id="last" formControlName="lastname">
+      </p>
+    </fieldset>
+    <fieldset formArrayName="modules">
+      <legend>Modules</legend>
+
+      @for (control of modules.controls; track control) {
+        <p>
+          <label [for]="'module' + $index">Module {{$index + 1}}</label>
+          <input [id]="'module' + $index" [formControlName]="$index">
+        </p>
+      }
+      <button (click)="addModule()" type="button">
+        Ajouter un module
+      </button>
+
+
+    </fieldset>
     <p>
       <button>Save</button>
     </p>
