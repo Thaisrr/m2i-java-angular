@@ -107,3 +107,9 @@ On peut créer un pipe personnalisé avec la commande :
 ```bash
 ng g pipe monpipe
 ```
+
+## Les Formulaires
+
+2 types en Angular : 
+- Template Driven Form
+- Reactive Forms

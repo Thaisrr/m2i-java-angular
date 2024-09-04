@@ -39,3 +39,10 @@
 - + titre souligné,
 - sinon un emoji pouce vers le bas. ( Utiliser un pipe pour l'emoji )
 - Ajouter un bouton pour marquer un livre comme lu / pas lu.
+
+## Exercice 5
+
+Dans le composant librairie, créer une formulaire pour créer un livre.
+Le titre et l'auteur.trice sont obligatoire.
+Par défaut, la valeur de isRead est false.
+Ajouter le nouveau livre à la liste précédente.
