@@ -3,6 +3,8 @@ import {PokemonCardComponent} from "../../components/pokemon-card/pokemon-card.c
 import {FormsModule} from "@angular/forms";
 import {User} from "../../utils/types/user.type";
 import {UserCardComponent} from "../../components/user-card/user-card.component";
+import {ButtonComponent} from "../../components/button/button.component";
+import {CounterComponent} from "../../components/counter/counter.component";
 
 @Component({
   selector: 'app-parent',
@@ -10,7 +12,9 @@ import {UserCardComponent} from "../../components/user-card/user-card.component"
   imports: [
     PokemonCardComponent,
     FormsModule,
-    UserCardComponent
+    UserCardComponent,
+    ButtonComponent,
+    CounterComponent
   ],
   templateUrl: './parent.component.html',
   styleUrl: './parent.component.css'
@@ -24,4 +28,13 @@ export class ParentComponent {
     {lastname: 'La Tourtel', firstname: 'Jean Micheline', email: 'jeanmiche@mail.fr'},
   ]
 
+  counter = 10;
+
+  sayHi(msg: string) {
+    console.log(msg)
+  }
+
+  modifyCounter(newValue: number) {
+    this.counter = newValue;
+  }
 }

@@ -17,3 +17,15 @@
 }
 
 <app-user-card [user]="{firstname: 'Toto', lastname: 'Titi', email: 'tototiti@mail.fr'}"></app-user-card>
+
+
+<h2>Les Slots</h2>
+
+<p>
+  <app-button (clickEvent)="sayHi('coucou')">Cliquez ici !</app-button>
+  <app-button (clickEvent)="sayHi('Hello')">Cliquez ici !</app-button>
+</p>
+
+<h2>Outputs</h2>
+
+<app-counter [count]="counter" (countChange)="modifyCounter($event)"></app-counter>
