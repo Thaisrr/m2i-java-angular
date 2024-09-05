@@ -68,3 +68,10 @@ Créer un nouveau composant et sa route
 
 Reprendre les pokemons ( cf correction )
 Transformer les cartes en composant pour afficher les pokemons.
+
+
+## Exercice 8
+
+Créer un bouton dans le pokemon-card permettant de supprimer un pokemon.
+- Le bouton doit envoyer un événement au parent.
+- Le parent doit récupérer cet événement pour supprimer le pokemon de la liste
