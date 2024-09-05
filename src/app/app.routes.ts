@@ -6,6 +6,7 @@ import {HomeComponent} from "./pages/home/home.component";
 import {NotFoundComponent} from "./pages/not-found/not-found.component";
 import {AdminComponent} from "./pages/admin/admin.component";
 import {AddComponent} from "./pages/admin/add/add.component";
+import {ParentComponent} from "./pages/parent/parent.component";
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -16,6 +17,7 @@ export const routes: Routes = [
   {path: 'admin', component: AdminComponent, children: [
       {path: 'add', component: AddComponent}
    ]},
+  {path: 'parent', component: ParentComponent},
   {path: 'accueil', redirectTo: ''},
   {path: 'acceuil', redirectTo: ''},
   {path: '**', component: NotFoundComponent}

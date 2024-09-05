@@ -19,7 +19,7 @@ main {
 }
 
 h1, h2 {
-  var(--title-font);
+  font-family: var(--title-font);
   text-transform: uppercase;
   font-weight: bold;
 }
