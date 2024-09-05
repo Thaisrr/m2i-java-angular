@@ -123,10 +123,17 @@ Les états des formControl :
 - pristine -> le champs n'a jamais reçu d'intéraction
 
 Dans les formulaires réactives, on peut retrouver 3 classes principales pour représenter les données :
-- FormControl pour les données simples ( boolean, string, number),
-- FormGroup pour les objets,
-- FormArray pour les tableaux.
+- FormControl pour les données simples ( inputs, selects, textarea ),
+- FormGroup pour les objets d'inputs ( ensemble d'inputs qui forment un objet ),
+- FormArray pour les tableaux d'inputs
 
 Dans un formArray, les formControlName sont l'index récupéré par le @for.
 Il faut donc le passer dynamiquement, en mettant formControlName entre crochets :
 `[formControlName]="$index"`.
+
+
+On peut créer des Validators personnalisés dans un fichier typescript.
+Ces validators sont des fonctions, qui retourne une fonction de type `ValidatorFn`.
+Cette `ValidatorFn` prend en paramétre un élément de type `AbstractControl`, qui peut être une instance de FormGroup, FormControl, ou FormArray.
+
+Enfin, la fonction doit retourner un objet dont la clef est le nom de l'erreur, et la valeur true si il y a erreur, false dans le cas contraire.

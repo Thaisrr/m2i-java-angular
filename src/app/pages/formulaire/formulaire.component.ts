@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {FormArray, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
+import {passwordValidator} from "../../utils/validators/password.validator";
 
 @Component({
   selector: 'app-formulaire',
@@ -69,8 +70,10 @@ export class FormulaireComponent {
     modules: new FormArray([
       new FormControl(''),
       new FormControl('')
-    ])
-  });
+    ]),
+    password: new FormControl(''),
+    validatePassword: new FormControl('')
+  }, [passwordValidator()]);
 
   get title() {
     return this.formation_form.controls.title;

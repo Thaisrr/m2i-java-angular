@@ -114,6 +114,18 @@
 
 
     </fieldset>
+
+    <p>
+      <label>Mot de passe</label>
+      <input formControlName="password">
+    </p>
+    <p>
+      <label>Valider le mot de passe</label>
+      <input formControlName="validatePassword" />
+    </p>
+    @if (formation_form.hasError('passwordsNotMatch')) {
+      <p class="error">Les mots de passes doivent être identiques</p>
+    }
     <p>
       <button>Save</button>
     </p>
