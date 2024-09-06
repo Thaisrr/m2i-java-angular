@@ -81,6 +81,22 @@ Créer un bouton dans le pokemon-card permettant de supprimer un pokemon.
 Créer un PokedexService
 - Contient un tableau de pokemons
 - Deux méthodes pour ajouter et supprimer du tableau
+- Une méthode pour vérifier si un pokemon est déjà dans le pokedex
 
 - Dans PokemonCard, ajouter un bouton pour ajouter au pokédex
-- Dans un composant Pokedex afficher la liste des pokemons du pokedex
+- Dans une page Pokedex afficher la liste des pokemons du pokedex
+
+
+## Exercice 10
+
+ - Créer un nouveau projet de site de e-commerce
+- Gérer mes marchandises : ajouter, supprimer, voir dans un tableau d'administration
+- Page d'accueil avec une entête, un footer, une grille de mes marchandises.
+- On peut ajouter des marchandises dans un panier.
+- On peut voir le panier
+
+Bonus : 
+- Sur la page d'accueil, on peut trier les marchandises par prix
+- On peut rechercher une marchandise par son nom avec une barre de recherche
+- On ajoute un système de stocks sur les marchandises : si il n'y en a plus en stocks;
+  -> elles s'affichent en grisée, et on ne peut pas l'ajouter au panier.
