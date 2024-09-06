@@ -7,6 +7,8 @@ import {NotFoundComponent} from "./pages/not-found/not-found.component";
 import {AdminComponent} from "./pages/admin/admin.component";
 import {AddComponent} from "./pages/admin/add/add.component";
 import {ParentComponent} from "./pages/parent/parent.component";
+import {LifecycleComponent} from "./pages/lifecycle/lifecycle.component";
+import {FormationsComponent} from "./pages/formations/formations.component";
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -18,6 +20,8 @@ export const routes: Routes = [
       {path: 'add', component: AddComponent}
    ]},
   {path: 'parent', component: ParentComponent},
+  {path: 'life', component: LifecycleComponent},
+  {path: 'formations', component: FormationsComponent},
   {path: 'accueil', redirectTo: ''},
   {path: 'acceuil', redirectTo: ''},
   {path: '**', component: NotFoundComponent}

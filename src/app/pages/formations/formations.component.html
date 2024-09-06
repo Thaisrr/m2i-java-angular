@@ -1,0 +1,10 @@
+<h1>Formation</h1>
+
+@for (form of formations; track form) {
+  <article>
+    <h3>{{form.title}}</h3>
+    <p>Durée: {{form.duration}}</p>
+  </article>
+} @empty {
+  <p>Aucune formation</p>
+}

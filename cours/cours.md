@@ -93,6 +93,11 @@ Les images sont gérées en lazy loading par Angular grâce à la directive [ngS
 - Indiquer une width et height ou fill
 - Lorsque fill, le parent doit être en `position: relative`, et l'image en `object-fit: contain ou cover`.
 
+```angular2html
+<img [ngSrc]="'monimage'" priority width="200" height="100" />
+```
+
+
 ## Les Pipes
 
 Les pipes sont des fonctions qui prennent une valeur en entrée, et ressorte la valeur transformée.
@@ -105,7 +110,7 @@ Il y a un pipe ``number`` qui prend en paramètre une string qui défini :
 
 On peut créer un pipe personnalisé avec la commande :
 ```bash
-ng g pipe monpipe
+ng g pipe chemin/monpipe
 ```
 
 ## Les Formulaires
@@ -114,7 +119,7 @@ ng g pipe monpipe
 - Template Driven Form : avec [(ngModel)] qui permet de faire du two way binding
 - Reactive Forms
 
-Les états des formControl :
+Les états des formControl / formGroup / formArray :
 - valid -> respecte tous les validators
 - invalid -> ne respecte au moins des validators
 - touched (?) -> le champs à déjà perdu le focus
@@ -137,3 +142,20 @@ Ces validators sont des fonctions, qui retourne une fonction de type `ValidatorF
 Cette `ValidatorFn` prend en paramétre un élément de type `AbstractControl`, qui peut être une instance de FormGroup, FormControl, ou FormArray.
 
 Enfin, la fonction doit retourner un objet dont la clef est le nom de l'erreur, et la valeur true si il y a erreur, false dans le cas contraire.
+
+
+## Cycle de Vie
+
+Il y a trois hooks principaux pour le cycle de vie : 
+- OnChange 
+  - -> se lance quand l'@Input() change. Ne se lance pas si pas d'Inputs
+  - Pour réagir aux modifications d'un input
+  - On reçoit la valeur précédente, la nouvelle valeur, et si c'est le premier changement.
+- OnInit 
+  - -> se lance quand tous les Input ont été chargés. Se lance même si pas d'input.
+  - Pour agir quand le composant est prét -> faire les requêtes HTTP
+  - Récupérer des données
+- OnDestroy 
+  - -> se lance quand on quitte le composant.
+  - Pour couper les streams, les souscriptions, les web sockets, les écouteurs...
+
