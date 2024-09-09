@@ -107,3 +107,11 @@ Bonus :
 Reprendre le pokedex : 
 - Afficher dans la barre de navigation, à côté du lien vers le pokedex, 
 le nombre de pokemons qu'il y a dedans.
+
+## Exercice 12
+
+Créer un nouveau composant, ChuckNorris
+-> Utiliser l'api Chuck Norris fact pour afficher une fact en random.
+- Le composant doit recevoir une string
+Ajouter un bouton pour recharger la blague
+- https://api.chucknorris.io/
