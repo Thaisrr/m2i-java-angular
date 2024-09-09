@@ -1,0 +1,23 @@
+<h1>Les Observables</h1>
+
+<p>Ma dernière donnée d'observable : {{donnee}}</p>
+
+<h2>Mes données reçues : </h2>
+<ul>
+  @for (d of donnees; track d) {
+    <li>{{d}}</li>
+  }
+</ul>
+
+<h2>Livres</h2>
+<ul>
+  @for (b of books; track b) {
+    <li>{{b}}</li>
+  }
+</ul>
+
+<h2>Input</h2>
+
+<p>
+  <input #input_value />
+</p>

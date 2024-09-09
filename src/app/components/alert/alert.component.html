@@ -1,0 +1,7 @@
+<div class="alert-group">
+  @for (a of alerts; track a) {
+    <div class="alert" [class]="[a.level]" >
+      {{a.text}}
+    </div>
+  }
+</div>

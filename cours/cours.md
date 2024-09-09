@@ -159,3 +159,38 @@ Il y a trois hooks principaux pour le cycle de vie :
   - -> se lance quand on quitte le composant.
   - Pour couper les streams, les souscriptions, les web sockets, les écouteurs...
 
+## RXJS
+
+### Les Observables : 
+
+- Un observable est un flux auquel il faut s'abonner.
+- Il peut renvoyer 3 types données: 
+  - next: une valeur. On peut en recevoir plusieurs tant qu'on est abonné à l'observable
+  - error: retourne un objet Error. Une erreur marque la fin de l'observable, et coupe les abonnements.
+  - complete: ne retourne rien. S'exécute quand l'observable se termine naturellement de lui même.
+
+- On peut agir avant la souscription avec les pipes : 
+  - catchError : gére l'erreur et doit retourner soit une erreur plus user friendly, soit un observable
+  - map: récupère et modifie la donnée de l'observable
+  - tap: récupère la donnée, et ne retourne rien
+
+### Les subjects
+
+Ce sont des types d'observable. 
+Les différences :
+- On n'a pas accès aux valeurs émises avant la souscription
+- On peut faire des nexts en dehors du constructor, quand on le souhaite.
+
+### Behaviour Subject
+
+C'est un type de subject.
+- Il prend une valeur par défaut
+- A la souscription, on récupère la dernière valeur émise
+- On peut faire des next quand on le souhaite
+
+### Replay Subject
+
+Idem, c'est un type de subject
+- Il ne prend pas de valeur par défaut.
+- A la souscription, il récupère toutes les valeurs émises précédemment
+- On peut faire des nexts quand on le souhaite

@@ -9,6 +9,9 @@ import {AddComponent} from "./pages/admin/add/add.component";
 import {ParentComponent} from "./pages/parent/parent.component";
 import {LifecycleComponent} from "./pages/lifecycle/lifecycle.component";
 import {FormationsComponent} from "./pages/formations/formations.component";
+import {RxjsComponent} from "./pages/rxjs/rxjs.component";
+import {ObservablesComponent} from "./pages/rxjs/observables/observables.component";
+import {SubjectsComponent} from "./pages/rxjs/subjects/subjects.component";
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -22,6 +25,11 @@ export const routes: Routes = [
   {path: 'parent', component: ParentComponent},
   {path: 'life', component: LifecycleComponent},
   {path: 'formations', component: FormationsComponent},
+  {path: 'rxjs', component: RxjsComponent, children: [
+      {path: 'observables', component: ObservablesComponent},
+      {path: 'subjects', component: SubjectsComponent},
+    ]
+  },
   {path: 'accueil', redirectTo: ''},
   {path: 'acceuil', redirectTo: ''},
   {path: '**', component: NotFoundComponent}
