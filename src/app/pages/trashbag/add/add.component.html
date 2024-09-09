@@ -1,0 +1,17 @@
+<h1>Ajouter un sac poubelle</h1>
+
+<form (ngSubmit)="handleSubmit()">
+  <p>
+    <label>Nom: <input name="name" [(ngModel)]="bag.name"></label>
+  </p>
+  <p>
+    <label>Capacité: <input name="capacity" [(ngModel)]="bag.capacity" type="number"></label>
+  </p>
+  <p>
+    <label>A liens ?: <input  name="haslace" [(ngModel)]="bag.hasLace" type="checkbox"></label>
+  </p>
+  <p>
+    <button>Enregistrer</button>
+  </p>
+</form>
+Z

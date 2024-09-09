@@ -1,0 +1,12 @@
+<h1>Mon sac poubelle</h1>
+
+@let bag = bag$ | async;
+
+@if (bag) {
+  <h2>{{bag.name}}</h2>
+  <p>
+    <button (click)="remove(bag.id)">Supprimer</button>
+  </p>
+} @else {
+  <p>Aucun sac chargé</p>
+}

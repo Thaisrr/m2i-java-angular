@@ -1,0 +1,16 @@
+<h1>Sacs Poubelles</h1>
+
+<div class="grid">
+  @for (tb of trashbags; track tb.id) {
+    <div class="card">
+      <h3>{{tb.name}}</h3>
+      <p>Capacité: {{tb.capacity}}</p>
+      <p>{{tb.hasLace? 'Avec des liens !' : 'A corde'}}</p>
+      <p>
+        <a [routerLink]="'/trash/read/' + tb.id" >Voir le detail</a>
+      </p>
+    </div>
+  } @empty {
+    <p>Aucun sac pour le moment</p>
+  }
+</div>
