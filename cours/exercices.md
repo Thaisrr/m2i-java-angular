@@ -100,3 +100,10 @@ Bonus :
 - On peut rechercher une marchandise par son nom avec une barre de recherche
 - On ajoute un système de stocks sur les marchandises : si il n'y en a plus en stocks;
   -> elles s'affichent en grisée, et on ne peut pas l'ajouter au panier.
+
+
+## Exercice 11
+
+Reprendre le pokedex : 
+- Afficher dans la barre de navigation, à côté du lien vers le pokedex, 
+le nombre de pokemons qu'il y a dedans.
