@@ -17,6 +17,9 @@ import {TrashbagComponent} from "./pages/trashbag/trashbag.component";
 import {ListComponent} from "./pages/trashbag/list/list.component";
 import {AddComponent as TrashAddComponent} from './pages/trashbag/add/add.component';
 import {ReadComponent} from "./pages/trashbag/read/read.component";
+import {RegisterComponent} from "./pages/register/register.component";
+import {LoginComponent} from "./pages/login/login.component";
+import {isLoggedGuard} from "./utils/guards/is-logged.guard";
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -24,7 +27,7 @@ export const routes: Routes = [
   {path: 'blocks', component: BlocksComponent},
   {path: 'pipes', component: PipesComponent},
   {path: 'form', loadComponent: () => import('./pages/formulaire/formulaire.component').then(module => module.FormulaireComponent)},
-  {path: 'admin', component: AdminComponent, children: [
+  {path: 'admin', component: AdminComponent, canActivate: [isLoggedGuard], children: [
       {path: 'add', component: AddComponent}
    ]},
   {path: 'parent', component: ParentComponent},
@@ -41,6 +44,8 @@ export const routes: Routes = [
       {path: 'add', component: TrashAddComponent},
       {path: 'read/:id', component:ReadComponent}
     ]},
+  {path: 'register', component: RegisterComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'accueil', redirectTo: ''},
   {path: 'acceuil', redirectTo: ''},
   {path: '**', component: NotFoundComponent}

@@ -1,4 +1,13 @@
 {
+  "users": [
+    {
+      "email": "jeanmich@mail.fr",
+      "password": "$2a$10$D5Oyh1fWRwa7Rf.8WgMRROrD5aBG381wsdOmdlNE1MKWlp5vA7blW",
+      "firstname": "Jean Michel",
+      "lastname": "La Tourte",
+      "id": 1
+    }
+  ],
   "trashBags": [
     {
       "id": "c5cf",

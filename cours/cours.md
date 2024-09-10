@@ -194,3 +194,43 @@ Idem, c'est un type de subject
 - Il ne prend pas de valeur par défaut.
 - A la souscription, il récupère toutes les valeurs émises précédemment
 - On peut faire des nexts quand on le souhaite
+
+
+## Gestion de l'authentification
+
+### A l'inscription
+
+- On fait une requête avec les credentials vers la route de login de l'API ( en général /login)
+- L'API retourne un token de connexion ( JWT )
+  - On stocke le token dans le localstorage ou session storage
+- On précise à l'user qu'il / elle est bien connecté.e et on redirige vers une page au choix.
+
+### Envoyer le token à l'API
+
+- Un JWT s'envoie dans les headers de la requêtes, sous le paramètre 'Authorization', précédé du mot 'Bearer'
+```ts
+headers: {
+  Authorization: 'Bearer ' + montoken
+}
+```
+
+Pour éviter d'avoir à modifier chaque requêtes de chaques services, on peut passer un intercepteur, qui ajoutera automatiquement le token dans la requête.
+On créé un interceptor avec la commande `ng g interceptor chemin/nom`.
+L'interceptor doit cloner la requête pour y ajouter le header.
+Il retourne ensuite la fonction `next(requete)` qui prend la nouvelle requête en paramétre.
+
+
+### Gérer l'accès aux pages du front
+
+Les guards permettent de gérer l'accès aux pages de l'application.
+Il existe plusieurs types de guards: 
+- canActivate: se déclanche avant d'entrer sur la page
+- canDeactivate: se déclanche avant de sortir de la page
+
+Pour bloquer l'accès donc canActivate.
+`ng g guard chemin/nom`
+
+Un guard retourne un boolean : 
+- si true, on accède à la route,
+- si false, on reste où on est.
+On peut utiliser le Router pour rediriger vers une autre page.
