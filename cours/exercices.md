@@ -102,11 +102,12 @@ Bonus :
   -> elles s'affichent en grisée, et on ne peut pas l'ajouter au panier.
 
 Bonus Bonus
-- Utiliser json-server@0.17.4 pour stocker / récupérer les brouettes.
 - Utiliser json-server-auth pour permettre une connexion / Inscription
 - Sécuriser la page admin, accessible uniquement sur connexion
 - Renvoyer le JWT à chaque requêtes si il existe
 - Permettre la modification d'une brouette via une page update
+- Utiliser json-server@0.17.4 pour stocker / récupérer les brouettes.
+
 
 
 ## Exercice 11
