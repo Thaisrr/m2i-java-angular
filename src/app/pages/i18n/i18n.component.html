@@ -1,0 +1,37 @@
+<h1>I18N</h1>
+
+<p>L'internationnalisation</p>
+
+<h2>La Locale {{locale}}</h2>
+
+<p>Nous somme le {{today | date : 'full' : undefined : locale}}</p>
+<p>Le prix est {{ 25.99 | currency : devise:  'symbol' : undefined : locale }}</p>
+
+<p class="btn-group">
+  <button (click)="locale = 'fr-FR'">FR</button>
+  <button (click)="locale = 'en-US'">EN</button>
+</p>
+
+<p>
+  <button (click)="devise = 'EUR'">€</button>
+  <button (click)="devise = 'USD'">$</button>
+</p>
+
+<h2>Fichiers de traduction</h2>
+
+<p>{{ 'HELLO' | translate}}</p>
+<p>{{'WELCOME' | translate}}</p>
+
+<p>
+  <button (click)="changeLang('fr')">FR</button>
+  <button (click)="changeLang('en')">EN</button>
+</p>
+
+<h2>Accéder au DOM en TS</h2>
+
+<p #myP>Mon super paragraphe</p>
+
+<p>
+  <button (click)="changeColor('red')">Red</button>
+  <button (click)="changeColor('blue')">Blue</button>
+</p>

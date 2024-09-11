@@ -20,6 +20,7 @@ import {ReadComponent} from "./pages/trashbag/read/read.component";
 import {RegisterComponent} from "./pages/register/register.component";
 import {LoginComponent} from "./pages/login/login.component";
 import {isLoggedGuard} from "./utils/guards/is-logged.guard";
+import {I18nComponent} from "./pages/i18n/i18n.component";
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -46,6 +47,7 @@ export const routes: Routes = [
     ]},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'i18n', component: I18nComponent},
   {path: 'accueil', redirectTo: ''},
   {path: 'acceuil', redirectTo: ''},
   {path: '**', component: NotFoundComponent}

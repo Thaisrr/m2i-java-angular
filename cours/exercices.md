@@ -102,6 +102,7 @@ Bonus :
   -> elles s'affichent en grisée, et on ne peut pas l'ajouter au panier.
 
 Bonus Bonus
+- Installer json-server@0.17.4 et json-server-auth
 - Utiliser json-server-auth pour permettre une connexion / Inscription
 - Sécuriser la page admin, accessible uniquement sur connexion
 - Renvoyer le JWT à chaque requêtes si il existe
@@ -123,3 +124,11 @@ Créer un nouveau composant, ChuckNorris
 - Le composant doit recevoir une string
 Ajouter un bouton pour recharger la blague
 - https://api.chucknorris.io/
+
+
+
+## Exercice 13
+
+Créer une application de quiz
+Avec au choix un back end en Java / API existante 
+
